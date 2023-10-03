@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    /* config css toastify */
+    --toastify-color-success: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+    --toastify-color-warning: linear-gradient(15deg, #cff10f 0%, #f3cc0a 100%);
+    --toastify-color-error: linear-gradient(15deg, #f43b47 0%, #453a94 100%);
+    --toastify-icon-color-success: #035450;
+    --toastify-icon-color-warning: #cff10f;
+    --toastify-icon-color-error: #d0011b;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+    font-size: 12px;
+}
+
+input[type="radio"] {
+    width: 20px !important;
+    height: 20px !important;
+    cursor: pointer;
+}
+
+html *::-webkit-scrollbar {
+    border-radius: 0;
+    width: 8px;
+}
+
+html *::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.15);
+}
+
+html *::-webkit-scrollbar-track {
+    border-radius: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.bg-opacity {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+input::-ms-reveal,
+input::-ms-clear {
+    display: none;
+}
+
+.rounded-full {
+    border-radius: 999px !important;
+}
+
+.lds-ripple {
+    display: inline-block;
+    position: relative;
+    width: 120px;
+    height: 120px;
+}
+.lds-ripple div {
+    position: absolute;
+    border: 6px solid #ff9224;
+    opacity: 1;
+    border-radius: 50%;
+    animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.lds-ripple div:nth-child(2) {
+    animation-delay: -0.5s;
+}
+@keyframes lds-ripple {
+    0% {
+        top: 36px;
+        left: 36px;
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+    4.9% {
+        top: 36px;
+        left: 36px;
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+    5% {
+        top: 36px;
+        left: 36px;
+        width: 0;
+        height: 0;
+        opacity: 1;
+    }
+    100% {
+        top: 0px;
+        left: 0px;
+        width: 72px;
+        height: 72px;
+        opacity: 0;
+    }
+}
+
+input,
+button,
+option,
+select {
+    cursor: pointer;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
